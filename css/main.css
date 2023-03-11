@@ -448,6 +448,7 @@ a {
 }
 
 .site-header {
+  min-height: 80px;
   background-color: var(--site-header-bg);
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
@@ -495,15 +496,176 @@ a {
   background-image: url(../../images/nightmode.svg);
   background-repeat: no-repeat;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
+  margin-right: 40px;
+}
+.theme-dark .site-header__theme-button {
+  background-image: url(../../images/light-mode.svg);
 }
 .site-header__tel-box {
   display: flex;
   flex-direction: column;
+  margin-right: 31px;
 }
 .site-header__tel {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: var(--text-main-color);
+}
+.site-header__mailto {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--text-main-color);
+}
+.site-header__btn {
+  background: #6911AD;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  border: none;
+  padding: 13px 24px;
+  cursor: pointer;
+}
+.site-header__burger-btn {
+  display: none;
+  background-color: transparent;
+  background-image: url(../../images/burger-dark.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 19px;
+  border: none;
+  margin-right: 112px;
+}
+.site-header__menu-burger {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 18px;
+  background: linear-gradient(0deg, rgba(85, 80, 80, 0.6), rgba(88, 85, 85, 0.6));
+  transform: translateX(-100%);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.site-header__add-class {
+  transform: translateX(0%);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.site-header__burger-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 57px;
+}
+.site-header__close-btn {
+  background-color: transparent;
+  border: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  .site-header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .site-header__start {
+    margin-bottom: 10px;
+  }
+  .site-header__logo {
+    margin-right: 52px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .site-header__start {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .site-header__end {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .site-header__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .site-header__tel-box {
+    margin-bottom: 10px;
+  }
+  .site-header__theme-button {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .site-header__wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-header__nav {
+    display: none;
+  }
+  .site-header__tel-box {
+    display: none;
+  }
+  .site-header__btn {
+    display: none;
+  }
+  .site-header__theme-button {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin: 0px;
+    background-image: url(../../images/res-dark.svg);
+  }
+  .theme-dark .site-header__theme-button {
+    background-image: url(../../images/light-res.svg);
+  }
+  .site-header__logo {
+    margin-right: 0px;
+  }
+  .site-header__tel-box {
+    margin-bottom: 0px;
+  }
+  .site-header__burger-btn {
+    display: block;
+  }
+  .theme-dark .site-header__burger-btn {
+    background-image: url(../../images/burger-img.svg);
+  }
+  .site-header__menu-burger {
+    display: block;
+  }
+  .site-header__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 122px;
+    padding-left: 20px;
+  }
+  .site-header__item {
+    margin-bottom: 30px;
+  }
+  .site-header__burger-tel {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 39px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    background: #6911AD;
+    border-radius: 141px;
+    padding: 18px 40px;
+  }
 }/*# sourceMappingURL=main.css.map */
