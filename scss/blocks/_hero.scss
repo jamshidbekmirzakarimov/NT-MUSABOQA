@@ -1,15 +1,17 @@
 .hero-section{
-  padding-top: 139px;
-  padding-bottom: 121px;
+  padding-top: 80px;
+  padding-bottom: 120px;
   &__wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
+  
   &__title-box{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
+  
   &__title{
     width: 100%;
     max-width: 695px;
@@ -30,61 +32,47 @@
     line-height: 22px; 
     color: var(--text-main-color);
   }
-}
+  
+  &__link{
+    position: relative;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #929292;
+    z-index: 9999;
+    transition: 0.5s;
+    left: 30px;
 
-
-
-
-
-.dedcription-btn {
-  width: 150px;
-  height: 70px;
-  position: relative;
-  display: inline-block;
-  border-radius: 30px;
-  background-color: transparent;
-  color: #ffa000;
-  text-align: center;
-  font-size: 18px;
-  padding: 9px 0;
-  transition: all 0.3s;
-  margin: 20px 5px;
-  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.06);
-}
-.dedcription-btn .btn-icon {
-  background: #6911AD;
-  width: 70px;
-  height: 100%;
-  float: right;
-  position: absolute;
-  border-radius: 30px 30px 30px 30px;
-  left: 0px;
-  bottom: 0px;
-  transition: all 0.5s;
-}
-.name-descripeion {
-  position: relative;
-  z-index: 9999;
-  top: 30px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  color: #929292;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 40%;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #6911AD;
+      z-index: -9999;
+      top: 0;
+      transition: 0.5s;
+      left: 0;
+    }
+    &:hover{
+      &::before{
+        width: 100%;
+        transition: 0.5s;
+        border-radius: 30px;
+      }
+      color: #fff;
+    }
+  }
   
 }
 
-.dedcription-btn:hover .btn-icon {
-  width: 100%;
-  border-radius: 30px;
-}
 
-.dedcription-btn:hover .name-descripeion{
-  top: 13px;
-  color: #fff;
-}
 
-.dedcription-btn:hover {
-  color: #fff!important;
+@media only screen and (max-width: 768px){
+  
 }
 

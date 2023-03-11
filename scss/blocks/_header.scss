@@ -2,7 +2,7 @@
 .site-header-bg{
   background-image: url(../../images/header-bg.svg);
   background-repeat: no-repeat;
-
+  background-size: cover;
 }
 
 .theme-dark .site-header-bg{
@@ -10,6 +10,8 @@
 }
 
 .site-header{
+  position: sticky;
+  top: 0;
   min-height: 80px;
   background-color: var(--site-header-bg);
   backdrop-filter: blur(1px);

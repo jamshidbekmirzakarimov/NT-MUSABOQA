@@ -440,6 +440,7 @@ a {
 .site-header-bg {
   background-image: url(../../images/header-bg.svg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .theme-dark .site-header-bg {
@@ -447,6 +448,9 @@ a {
 }
 
 .site-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   min-height: 80px;
   background-color: var(--site-header-bg);
   -webkit-backdrop-filter: blur(1px);
@@ -669,8 +673,8 @@ a {
   }
 }
 .hero-section {
-  padding-top: 139px;
-  padding-bottom: 121px;
+  padding-top: 80px;
+  padding-bottom: 120px;
 }
 .hero-section__wrapper {
   display: flex;
@@ -678,7 +682,7 @@ a {
   justify-content: space-between;
 }
 .hero-section__title-box {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .hero-section__title {
   width: 100%;
@@ -699,56 +703,42 @@ a {
   line-height: 22px;
   color: var(--text-main-color);
 }
-
-.dedcription-btn {
-  width: 150px;
-  height: 70px;
+.hero-section__link {
   position: relative;
-  display: inline-block;
-  border-radius: 30px;
-  background-color: transparent;
-  color: #ffa000;
+  padding: 10px 20px;
   text-align: center;
-  font-size: 18px;
-  padding: 9px 0;
-  transition: all 0.3s;
-  margin: 20px 5px;
-  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.06);
-}
-
-.dedcription-btn .btn-icon {
-  background: #6911AD;
-  width: 70px;
-  height: 100%;
-  float: right;
-  position: absolute;
-  border-radius: 30px 30px 30px 30px;
-  left: 0px;
-  bottom: 0px;
-  transition: all 0.5s;
-}
-
-.name-descripeion {
-  position: relative;
-  z-index: 9999;
-  top: 30px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
   color: #929292;
+  z-index: 9999;
+  transition: 0.5s;
+  left: 30px;
 }
-
-.dedcription-btn:hover .btn-icon {
+.hero-section__link::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #6911AD;
+  z-index: -9999;
+  top: 0;
+  transition: 0.5s;
+  left: 0;
+}
+.hero-section__link:hover {
+  color: #fff;
+}
+.hero-section__link:hover::before {
   width: 100%;
+  transition: 0.5s;
   border-radius: 30px;
 }
 
-.dedcription-btn:hover .name-descripeion {
-  top: 13px;
-  color: #fff;
-}
-
-.dedcription-btn:hover {
-  color: #fff !important;
+.site-main {
+  background-image: url(../../images/main-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }/*# sourceMappingURL=main.css.map */
