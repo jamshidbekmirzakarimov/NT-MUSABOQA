@@ -1,0 +1,71 @@
+
+.site-header-bg{
+  background-image: url(../../images/header-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.theme-dark .site-header-bg{
+  background-image: url(../../images/header-bg-light.svg);
+}
+
+.site-header{
+  background-color: var(--site-header-bg);
+  backdrop-filter: blur(1px);
+  padding-top: 18px;
+  padding-bottom: 18px;
+  transition: background-color 0.3s ease;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__start{
+    display: flex;
+    align-items: center;
+  }
+  &__logo{
+    color: var(--text-main-color);
+    margin-right: 152px;
+  }
+  
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__item{
+    margin-right: 16px;
+  }
+  &__link{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--text-main-color);
+    transition: background-color 0.3s ease;
+  }
+  &__end{
+    display: flex;
+    align-items: center;
+  }
+  &__theme-button{
+    width: 93px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../../images/nightmode.svg);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  &__tel-box{
+    display: flex;
+    flex-direction: column;
+  }
+  &__tel{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--text-main-color);
+  }
+}
